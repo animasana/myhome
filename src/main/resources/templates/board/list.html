@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head th:replace="~{layouts/header :: head('게시판')}"> </head>
+
+  <body>
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary"
+      th:replace="~{layouts/header :: menu('board')}"
+    ></nav>
+
+    <div class="container">
+      <h2>게시판</h2>
+    </div>
+  </body>
+</html>
