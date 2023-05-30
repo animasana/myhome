@@ -10,6 +10,28 @@
 
     <div class="container">
       <h2>게시판</h2>
+      <div>총 건수: <span th:text="${#lists.size(articleList)}"></span></div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Content</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="article : ${articleList}">
+            <th scope="row" th:text="${article.id}">1</th>
+            <td th:text="${article.title}">Otto</td>
+            <td th:text="${article.content}">@mdo</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="text-right">
+        <button type="button" class="btn btn-sm btn-outline-primary">
+          쓰기
+        </button>
+      </div>
     </div>
   </body>
 </html>
